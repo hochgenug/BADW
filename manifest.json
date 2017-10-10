@@ -9,7 +9,7 @@
     "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/betaseries.js"]
   }, {
     "run_at": "document_end",
-    "matches": ["http://www.zone-telechargement.ws/*"],
+    "matches": ["*://www.zone-telechargement.ws/*"],
     "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/zone-telechargement.js"]
   }, {
     "run_at": "document_end",
