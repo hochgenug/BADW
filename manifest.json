@@ -1,25 +1,25 @@
 {
-    "manifest_version": 2,
-    "name": "Auto Downloader",
-    "description": "This extension will...",
-    "version": "1.0",
+  "manifest_version": 2,
+  "name": "Auto Downloader",
+  "description": "This extension will...",
+  "version": "1.0",
 
-    "content_scripts": [{
-        "run_at": "document_end",
-        "matches": ["https://www.betaseries.com/membre/*/series"],
-        "js": ["jquery.js", "betaseries.js"]
-    },{
-        "run_at": "document_end",
-        "matches": ["http://www.zone-telechargement.ws/*"],
-        "js": ["jquery.js", "zone-telechargement.js"]
-    },{
-        "run_at": "document_end",
-        "matches": ["https://www.protect-zt.com/*"],
-        "js": ["jquery.js", "protect-zt.js"]
-    },{
-        "run_at": "document_end",
-        "matches": ["https://login.uptobox.com/","*://uptobox.com/*"],
-        "js": ["jquery.js", "uptobox.js"]
-    }],
-	"web_accessible_resources": ["injectBetaseries.js"]
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": ["https://www.betaseries.com/membre/*/series"],
+    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/betaseries.js"]
+  }, {
+    "run_at": "document_end",
+    "matches": ["http://www.zone-telechargement.ws/*"],
+    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/zone-telechargement.js"]
+  }, {
+    "run_at": "document_end",
+    "matches": ["https://www.protect-zt.com/*"],
+    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/protect-zt.js"]
+  }, {
+    "run_at": "document_end",
+    "matches": ["https://login.uptobox.com/", "*://uptobox.com/*"],
+    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/uptobox.js"]
+  }],
+  "web_accessible_resources": ["scripts/injectBetaseries.js"]
 }
