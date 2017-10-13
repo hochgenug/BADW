@@ -22,14 +22,18 @@ $('.cover_global').each(function () {
 
     var details = '';
     if (resolution !== null) {
-        if(resolution[0].indexOf('hd') !== -1){
-            resolution[0] = resolution[0].replace('hd','') + 'p';
+        if (resolution[0].indexOf('hd') !== -1) {
+            resolution[0] = resolution[0].replace('hd', '') + 'p';
         }
         details += resolution[0] + ' ';
 
         // Highlight the HD files
         if (resolution[0] == "1080p") {
-            $(this).css({border: "2px #ff5d00 solid", padding: "0px", "box-shadow": "10px 10px 5px rgba(232, 187, 23, 0.66)"});
+            $(this).css({
+                border: "2px #ff5d00 solid",
+                padding: "0px",
+                "box-shadow": "10px 10px 5px rgba(232, 187, 23, 0.66)"
+            });
         } else {
             $(this).css({border: "2px #e4a6af solid", padding: "0px", "box-shadow": "10px 10px 5px #888"});
         }
@@ -41,3 +45,5 @@ $('.cover_global').each(function () {
         $(this).find('.cover_infos_title').children('a').append("<div>" + details.toUpperCase() + "</div>");
     }
 });
+
+scrollTo(".cover_global", "#searchinput");

@@ -9,8 +9,12 @@
     "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/betaseries.js"]
   }, {
     "run_at": "document_end",
-    "matches": ["*://www.zone-telechargement.ws/*"],
-    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/zone-telechargement.js"]
+    "matches": ["*://*.zone-telechargement.ws/index.php*"],
+    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/functions.js", "scripts/zt-search.js"]
+  }, {
+    "run_at": "document_end",
+    "matches": ["*://*.zone-telechargement.ws/telecharger-series/*"],
+    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/functions.js", "scripts/zt-series.js"]
   }, {
     "run_at": "document_end",
     "matches": ["https://www.protect-zt.com/*"],
