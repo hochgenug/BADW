@@ -4,3 +4,6 @@ script.onload = function() {
     this.remove();
 };
 (document.head || document.documentElement).appendChild(script);
+
+removeAllIfExist($(".tagsList "));
+removeAllIfExist($(".etags "));

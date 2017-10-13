@@ -6,7 +6,7 @@
   "content_scripts": [{
     "run_at": "document_end",
     "matches": ["https://www.betaseries.com/membre/*/series"],
-    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/betaseries.js"]
+    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/functions.js", "scripts/betaseries.js"]
   }, {
     "run_at": "document_end",
     "matches": ["*://*.zone-telechargement.ws/index.php*"],

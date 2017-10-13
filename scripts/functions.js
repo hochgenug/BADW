@@ -6,8 +6,17 @@ function scrollTo(destination, condition) {
     }
 }
 
+function removeAllIfExist(object) {
+    $.each($(object), function () {
+        {
+            removeIfExist($(this));
+        }
+    });
+}
+
 function removeIfExist(object) {
     if ($(object).length === 1) {
         $(object).remove()
     }
 }
+
