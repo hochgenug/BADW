@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Betaseries Automatic Download Workflow",
   "description": "This extension help you to get episodes from betaseries.com faster.",
-  "version": "1.0",
+  "version": "1.1",
   "content_scripts": [{
     "run_at": "document_end",
     "matches": ["https://www.betaseries.com/membre/*/series"],
