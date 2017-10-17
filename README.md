@@ -3,6 +3,7 @@
 * betaseries.com
     * Add links to get the episode (ZT & t411)
     * Complete a season with one click
+    * Auto click on the view "Serie in progress" & "Series Started"
     * Remove tag feature
 * zone-telechargement.ws
     * When coming from betaserie, redirect on the selected serie
@@ -21,3 +22,4 @@
 ### TODO : 
  * Auto close UTB tab if download start.
  * Add options to disable added features per website
+ * Add proper icon for the extension
