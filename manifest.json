@@ -17,7 +17,7 @@
     "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/functions.js", "scripts/zt-series.js"]
   }, {
     "run_at": "document_end",
-    "matches": ["https://www.protect-zt.com/*"],
+    "matches": ["*://*.protecte-link.com/*"],
     "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/protect-zt.js"]
   }, {
     "run_at": "document_end",
