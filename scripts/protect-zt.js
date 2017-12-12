@@ -1,15 +1,20 @@
-var link = jQuery('.lienet a').attr('href');
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+        localStorage.setItem("url",  request.greeting);
+    });
 
-if (link != undefined) {
-    window.location.href = link;
+//set default value
+if(localStorage.getItem("url") === null){
+    if(document.referrer.includes("zone-telechargement")){
+        localStorage.setItem("url", "www.dl-protect1.com");
+    }
 }
 
-jQuery.ajax({
-    type: "POST",
-    url: "https://" + location.hostname + "/php/Qaptcha.jquery.php",
-    data: "action=qaptcha&qaptcha_key=" + jQuery('.QapTcha  > input').attr('name'),
-    success: function() {
-        jQuery('.QapTcha  > input').val('');
-        jQuery('form > fieldset > input[type="submit"]').click()
+if(localStorage.getItem("url") === window.location.hostname){
+    var link = jQuery('.lienet a').attr('href');
+
+    if (link != undefined) {
+        window.location.href = link;
     }
-});
+    $(".continuer").click()
+}
