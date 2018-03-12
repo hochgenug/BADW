@@ -3,12 +3,14 @@ autoLogin();
 
 function autoDownload() {
     var btn_download = $('#btn_download');
-    if (btn_download.val() === "Générer le lien de téléchargement ") {
+    var btn_launch_download = $('.big-button-green-flat');
+
+    if (btn_download.text().trim() === "Générer le lien de téléchargement") {
         btn_download.click();
     }
 
-    if ($('.button_upload font').first().text() === "Cliquez-ici pour lancer votre téléchargement") {
-        location.href = $('.button_upload').first().parent('a').attr('href');
+    if (btn_launch_download.text().replace(/[\t\n]+/g,' ').trim() == "Cliquez-ici pour lancer votre téléchargement") {
+        location.href = btn_launch_download.attr('href');
     }
 }
 
