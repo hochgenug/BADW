@@ -5,19 +5,20 @@
     * Complete a season with one click
     * Auto click on the view "Serie in progress" & "Series Started"
     * Remove tag feature
-* zone-telechargement.ws
+* zone-telechargement1.com
     * When coming from betaserie, redirect on the selected serie
     * On the search page, display the lang and the resolution
     * On the search page, highlight the 1080p and 720p files
     * On the search page, auto scroll to the results
     * On the season page, auto scroll to the season quality buttons
     * Remove unneeded stuff and add auto scroll
-* protect-zt.com
-    * Bypass the qaptcha
+* dl-protect1.com
     * Auto click on the links
 * uptobox.com
     * Auto click on the links
     * Auto login
+* extreme-down.im
+    * Auto search the requested serie
 
 ### TODO : 
  * Auto close UTB tab if download start.

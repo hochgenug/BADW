@@ -1,13 +1,8 @@
 // Auto search when the param search is set
 if ($('#searchinput').length === 0) {
-    $.urlParam = function (name) {
-        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-        return results[1] || 0;
-    };
-    var serie = $.urlParam('search').replace(/\+/g, ' ').replace(/\:/g, ' ');
+    var serie = getUrlParam('search').replace(/\+/g, ' ').replace(/\:/g, ' ');
     $('#searchsugg').val(serie);
     $('#searchform .submit input').trigger('click');
-    eval(event);
 }
 
 // Display language and resolution

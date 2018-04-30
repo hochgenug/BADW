@@ -20,3 +20,7 @@ function removeIfExist(object) {
     }
 }
 
+function getUrlParam($paramKey) {
+    var results = new RegExp('[\?&]' + $paramKey + '=([^&#]*)').exec(window.location.href);
+    return results[1] || 0;
+}

@@ -2,32 +2,78 @@
   "manifest_version": 2,
   "name": "Betaseries Automatic Download Workflow",
   "description": "This extension help you to get episodes from betaseries.com faster.",
-  "version": "1.5",
+  "version": "1.6",
   "content_scripts": [
     {
-    "run_at": "document_end",
-    "matches": ["https://www.betaseries.com/membre/*/series"],
-    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/functions.js", "scripts/betaseries.js"]
-  },
+      "run_at": "document_end",
+      "matches": [
+        "https://www.betaseries.com/membre/*/series"
+      ],
+      "js": [
+        "scripts/lib/jquery-3.2.1.min.js",
+        "scripts/functions.js",
+        "scripts/betaseries.js"
+      ]
+    },
     {
-    "run_at": "document_end",
-    "matches": ["*://*.zone-telechargement1.com/index.php*"],
-    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/functions.js", "scripts/zt-search.js"]
-  }, {
-    "run_at": "document_end",
-    "matches": ["*://*.zone-telechargement1.com/telecharger-series/*"],
-    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/functions.js", "scripts/zt-series.js"]
-  }, {
-    "run_at": "document_end",
-    "matches": ["*://*/*"],
-    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/protect-zt.js"]
-  }, {
-    "run_at": "document_end",
-    "matches": ["https://login.uptobox.com/", "*://uptobox.com/*"],
-    "js": ["scripts/lib/jquery-3.2.1.min.js", "scripts/uptobox.js"]
-  }],
-    "browser_action": {
+      "run_at": "document_end",
+      "matches": [
+        "*://*.zone-telechargement1.com/index.php*"
+      ],
+      "js": [
+        "scripts/lib/jquery-3.2.1.min.js",
+        "scripts/functions.js",
+        "scripts/zt-search.js"
+      ]
+    },
+    {
+      "run_at": "document_end",
+      "matches": [
+        "*://*.zone-telechargement1.com/telecharger-series/*"
+      ],
+      "js": [
+        "scripts/lib/jquery-3.2.1.min.js",
+        "scripts/functions.js",
+        "scripts/zt-series.js"
+      ]
+    },
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://www.extreme-down.im/index.php*"
+      ],
+      "js": [
+        "scripts/lib/jquery-3.2.1.min.js",
+        "scripts/functions.js",
+        "scripts/ed-search.js"
+      ]
+    },
+    {
+      "run_at": "document_end",
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "scripts/lib/jquery-3.2.1.min.js",
+        "scripts/protect-zt.js"
+      ]
+    },
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://login.uptobox.com/",
+        "*://uptobox.com/*"
+      ],
+      "js": [
+        "scripts/lib/jquery-3.2.1.min.js",
+        "scripts/uptobox.js"
+      ]
+    }
+  ],
+  "browser_action": {
     "default_popup": "popup.html"
   },
-  "web_accessible_resources": ["scripts/injectBetaseries.js"]
+  "web_accessible_resources": [
+    "scripts/injectBetaseries.js"
+  ]
 }
