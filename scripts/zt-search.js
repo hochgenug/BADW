@@ -1,29 +1,30 @@
 // Auto search when the param search is set
-if ($('#searchinput').length === 0) {
-    var serie = getUrlParam('search').replace(/\+/g, ' ').replace(/\:/g, ' ');
-    $('#searchsugg').val(serie);
-    $('#searchform .submit input').trigger('click');
+if ($("#searchinput").length === 0) {
+    /*global getUrlParam */
+    var serie = getUrlParam("search").replace(/\+/g, " ").replace(/\:/g, " ");
+    $("#searchsugg").val(serie);
+    $("#searchform .submit input").trigger("click");
 }
 
 // Display language and resolution
-$('.cover_global').each(function () {
+$(".cover_global").each(function () {
     // Increase height in order ton add one more line with details
     $(this).css({height: "248px"});
 
-    var serieLink = $(this).children('div').children('a').attr('href');
+    var serieLink = $(this).children("div").children("a").attr("href");
     // Extract data from the link
     var resolution = serieLink.match(/(\d{3,4}(?:p|i)|(?:hd)\d{3,4})/i);
     var language = serieLink.match(/(?:french|vostfr|multi)/i);
 
-    var details = '';
+    var details = "";
     if (resolution !== null) {
-        if (resolution[0].indexOf('hd') !== -1) {
-            resolution[0] = resolution[0].replace('hd', '') + 'p';
+        if (resolution[0].indexOf("hd") !== -1) {
+            resolution[0] = resolution[0].replace("hd", "") + "p";
         }
-        details += resolution[0] + ' ';
+        details += resolution[0] + " ";
 
         // Highlight the HD files
-        if (resolution[0] == "1080p") {
+        if (resolution[0] === "1080p") {
             $(this).css({
                 border: "2px #ff5d00 solid",
                 padding: "0px",
@@ -37,7 +38,7 @@ $('.cover_global').each(function () {
         details += language;
     }
     if (details !== null) {
-        $(this).find('.cover_infos_title').children('a').append("<div>" + details.toUpperCase() + "</div>");
+        $(this).find(".cover_infos_title").children("a").append("<div>" + details.toUpperCase() + "</div>");
     }
 });
 
