@@ -1,4 +1,7 @@
 # Betaseries Automatic Download Workflow
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/159b0a759a33407eb2634b05eb83919b)](https://app.codacy.com/app/hochgenug/BADW?utm_source=github.com&utm_medium=referral&utm_content=hochgenug/BADW&utm_campaign=badger)
+
 [This chrome extension](https://chrome.google.com/webstore/detail/betaseries-automatic-down/meibjlijpdmdihbjlemihnidcpaddolm) add features enhancement for the following websites :
 * betaseries.com
     * Add links to get the episode (ZT & ED & t411)
