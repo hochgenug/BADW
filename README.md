@@ -1,7 +1,7 @@
 # Betaseries Automatic Download Workflow
 [This chrome extension](https://chrome.google.com/webstore/detail/betaseries-automatic-down/meibjlijpdmdihbjlemihnidcpaddolm) add features enhancement for the following websites :
 * betaseries.com
-    * Add links to get the episode (ZT & t411)
+    * Add links to get the episode (ZT & ED & t411)
     * Complete a season with one click
     * Auto click on the view "Serie in progress" & "Series Started"
     * Remove tag feature
@@ -17,10 +17,6 @@
 * uptobox.com
     * Auto click on the links
     * Auto login
+    * Auto close tab when download start
 * extreme-down.im
     * Auto search the requested serie
-
-### TODO : 
- * Auto close UTB tab if download start.
- * Add options to disable added features per website
- * Add proper icon for the extension

@@ -9,8 +9,11 @@ function autoDownload() {
         btn_download.click();
     }
 
-    if (btn_launch_download.text().replace(/[\t\n]+/g,' ').trim() == "Cliquez-ici pour lancer votre téléchargement") {
+    if (btn_launch_download.text().replace(/[\t\n]+/g, ' ').trim() == "Cliquez-ici pour lancer votre téléchargement") {
         location.href = btn_launch_download.attr('href');
+        setTimeout(function () {
+            window.close();
+        }, 1000);
     }
 }
 
