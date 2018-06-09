@@ -21,5 +21,7 @@
     * Auto click on the links
     * Auto login
     * Auto close tab when download start
-* extreme-down.im
+* extreme-d0wn.com
     * Auto search the requested serie
+* ed-protect.org
+    * Bypass the validations
