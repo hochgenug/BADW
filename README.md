@@ -4,7 +4,7 @@
 
 [This chrome extension](https://chrome.google.com/webstore/detail/betaseries-automatic-down/meibjlijpdmdihbjlemihnidcpaddolm) add features enhancement for the following websites :
 * betaseries.com
-    * Add links to get the episode (ZT & ED & t411)
+    * Add links to get the episode (ZT & ED)
     * Complete a season with one click
     * Auto click on the view "Serie in progress" & "Series Started"
     * Remove tag feature
@@ -24,4 +24,4 @@
 * extreme-d0wn.com
     * Auto search the requested serie
 * ed-protect.org
-    * Bypass the validations
+    * Auto click on the link when it's available
