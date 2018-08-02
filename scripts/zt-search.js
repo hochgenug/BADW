@@ -2,14 +2,14 @@
 if ($("#searchinput").length === 0) {
     /*global getUrlParam */
     var serie = getUrlParam("search").replace(/\+/g, " ").replace(/\:/g, " ");
-    $("#searchsugg").val(serie);
+    $("#story").val(serie);
     $("#searchform .submit input").trigger("click");
 }
 
 // Display language and resolution
 $(".cover_global").each(function () {
     // Increase height in order ton add one more line with details
-    $(this).css({height: "248px"});
+    $(this).css({height: "300px"});
 
     var serieLink = $(this).children("div").children("a").attr("href");
     // Extract data from the link
