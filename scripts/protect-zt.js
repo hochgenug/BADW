@@ -13,6 +13,7 @@ if (localStorage.getItem("url") === null) {
 
 // autoclick when the link is available
 if (localStorage.getItem("url") === window.location.hostname) {
+    jQuery("input").click();
     let link = jQuery(".lienet a").attr("href");
     if (link !== undefined) {
         window.location.href = jQuery(".lienet a").attr("href");

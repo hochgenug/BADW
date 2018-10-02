@@ -2,14 +2,14 @@
   "manifest_version": 2,
   "name": "Betaseries Automatic Download Workflow",
   "description": "This extension help you to get episodes from betaseries.com faster.",
-  "version": "1.9",
+  "version": "1.10",
   "icons": {
     "16": "images/icon16.png",
     "128": "images/icon128.png"
   },
   "content_scripts": [
     {
-      "run_at": "document_end",
+      "run_at": "document_idle",
       "matches": [
         "https://www.betaseries.com/membre/*/series"
       ],
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "run_at": "document_end",
+      "run_at": "document_idle",
       "matches": [
         "*://*.zone-telechargement1.com/index.php*",
         "*://*.zone-telechargement1.org/index.php*"
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "run_at": "document_end",
+      "run_at": "document_idle",
       "matches": [
         "*://*.zone-telechargement1.com/telecharger-series/*"
       ],
@@ -43,9 +43,9 @@
       ]
     },
     {
-      "run_at": "document_end",
+      "run_at": "document_idle",
       "matches": [
-        "https://www.extreme-d0wn.com/index.php?do*"
+        "https://*.extreme-d0wn.com/index.php?do*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "run_at": "document_end",
+      "run_at": "document_idle",
       "matches": [
         "*://ed-protect.org/**"
       ],
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "run_at": "document_end",
+      "run_at": "document_idle",
       "matches": [
         "*://*/*"
       ],
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "run_at": "document_end",
+      "run_at": "document_idle",
       "matches": [
         "https://login.uptobox.com/",
         "*://uptobox.com/*"
