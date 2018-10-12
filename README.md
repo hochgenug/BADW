@@ -8,7 +8,7 @@
     * Complete a season with one click
     * Auto click on the view "Serie in progress" & "Series Started"
     * Remove tag feature
-* zone-telechargement1.com
+* zone-telechargement1.org
     * When coming from betaserie, redirect on the selected serie
     * On the search page, display the lang and the resolution
     * On the search page, highlight the 1080p and 720p files

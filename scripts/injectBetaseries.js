@@ -4,7 +4,7 @@ function getSearchUrl(provider, serie) {
     var searchLink = null;
     switch (provider) {
         case "ZT":
-            searchLink = "http://www.zone-telechargement1.com/index.php?search=";
+            searchLink = "https://zone-telechargement1.org/index.php?search=";
             break;
         case "ED":
             searchLink = "https://www.extreme-d0wn.com/index.php?do=search&badw=";
