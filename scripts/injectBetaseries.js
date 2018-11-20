@@ -3,8 +3,8 @@ function getSearchUrl(provider, serie) {
     serie = serie.replace(/\s/g, "+").replace(/\"/g, "+");
     var searchLink = null;
     switch (provider) {
-        case "ZT":
-            searchLink = "https://zone-telechargement1.org/index.php?search=";
+        case "AT":
+            searchLink = "https://www.annuaire-telechargement.com/index.php?search=";
             break;
         case "ED":
             searchLink = "https://www.extreme-d0wn.com/index.php?do=search&badw=";
@@ -17,9 +17,9 @@ function generaHtmlLink(link, name) {
     return "<a href=" + link + " target='_blank' style='text-decoration: none;font-weight: bold;' class='generated-links'>" + name + "</a>";
 }
 
-function getLinks(linkZT, linkED) {
+function getLinks(linkAT, linkED) {
     var html = "<div class='badw-feature' style ='position:absolute; right:130px;width:50px;'>";
-    html += generaHtmlLink(linkZT, "ZT") + " - " + generaHtmlLink(linkED, "ED");
+    html += generaHtmlLink(linkAT, "AT") + " - " + generaHtmlLink(linkED, "ED");
     html += "</div>";
     return html;
 }
@@ -29,7 +29,7 @@ var checkImage = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFs
 $("#member_shows > .showItem").each(function () {
     var serieName = $(this).children(".showItem__col--1").children(".title").children("strong").text();
     serieName = serieName.replace(/'/g, " ");
-    $(this).children(".showItem__col--3").children(".actions").append(getLinks(getSearchUrl("ZT", serieName), getSearchUrl("ED", serieName)) + "<div class='actionButton' onclick='checkAll(this)' style='position: absolute;left: 96px;color: black;height: 20px;'><img style='height:20px;' src='" + checkImage + "'></div>");
+    $(this).children(".showItem__col--3").children(".actions").append(getLinks(getSearchUrl("AT", serieName), getSearchUrl("ED", serieName)) + "<div class='actionButton' onclick='checkAll(this)' style='position: absolute;left: 96px;color: black;height: 20px;'><img style='height:20px;' src='" + checkImage + "'></div>");
 });
 
 // Only display the series in progress and not started.
