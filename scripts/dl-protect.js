@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(
 
 //set default value
 if (localStorage.getItem("url") === null) {
-    if (document.referrer.includes("zone-telechargement")) {
+    if (document.referrer.includes("annuaire-telechargement")) {
         localStorage.setItem("url", "www.dl-protect1.com");
     }
 }
