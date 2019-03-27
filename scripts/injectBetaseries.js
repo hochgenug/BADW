@@ -7,7 +7,7 @@ function getSearchUrl(provider, serie) {
             searchLink = "https://www.annuaire-telechargement.com/index.php?search=";
             break;
         case "ED":
-            searchLink = "https://ww1.extreme-download.me/home.html?do=search&subaction=search&story=";
+            searchLink = "https://ww1.extreme-d0wn.net/home.html?do=search&subaction=search&story=";
             break;
     }
     return searchLink + serie;
