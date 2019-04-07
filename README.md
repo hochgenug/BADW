@@ -4,12 +4,12 @@
 
 [This chrome extension](https://chrome.google.com/webstore/detail/betaseries-automatic-down/meibjlijpdmdihbjlemihnidcpaddolm) add features enhancement for the following websites :
 * betaseries.com
-    * Add links to get the episode (ZT & ED)
+    * Add links to get the episode (AT & ED)
     * Complete a season with one click
     * Auto click on the view "Serie in progress" & "Series Started"
     * Remove tag feature
-* zone-telechargement1.org
-    * When coming from betaserie, redirect on the selected serie
+* annuaire-telechargement.com
+    * Auto search the requested serie
     * On the search page, display the lang and the resolution
     * On the search page, highlight the 1080p and 720p files
     * On the search page, auto scroll to the results
@@ -21,7 +21,9 @@
     * Auto click on the links
     * Auto login
     * Auto close tab when download start
-* extreme-d0wn.com
+* extreme-d0wn.net
     * Auto search the requested serie
 * ed-protect.org
     * Auto click on the link when it's available
+    
+It's possible to enable/disable the feature for a specific website by clicking on the extension icon.

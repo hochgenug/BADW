@@ -15,7 +15,7 @@ if (localStorage.getItem("url") === null) {
 if (localStorage.getItem("url") === window.location.hostname) {
     jQuery("input").click();
     let link = jQuery(".lienet a").attr("href");
-    if (link !== undefined) {
+    if (typeof link !== "undefined") {
         window.location.href = jQuery(".lienet a").attr("href");
     }
 }
