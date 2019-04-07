@@ -1,12 +1,28 @@
-if ($(".lien a").length === 1) {
-    window.location.href = $(".affichier_lien a").attr("href");
-}
+// Check if the feature is enable
+let promise = new Promise(function (resolve) {
+    /*global chrome */
+    chrome.storage.sync.get({
+        isEdEnable: true
+    }, function (items) {
+        if (items.isEdEnable === true) {
+            resolve();
+        }
+    });
+});
 
+promise.then(function () {
+    if ($(".lien a").length === 1) {
+        window.location.href = $(".affichier_lien a").attr("href");
+    }
 
-if ($(".continuer").length === 1) {
-    $(".continuer").click();
-}
+    let continueButton = $(".continuer");
+    let submitButton = $("#submit_button");
 
-if ($("#submit_button").length === 1) {
-    $("#submit_button").click();
-}
+    if (continueButton.length === 1) {
+        continueButton.click();
+    }
+
+    if (submitButton.length === 1) {
+        submitButton.click();
+    }
+});

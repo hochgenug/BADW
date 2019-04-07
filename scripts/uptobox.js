@@ -1,6 +1,18 @@
+// Check if the feature is enable
+let promise = new Promise(function (resolve) {
+    /*global chrome */
+    chrome.storage.sync.get({
+        isUtbEnable: true
+    }, function (items) {
+        if (items.isUtbEnable === true) {
+            resolve();
+        }
+    });
+});
+
 function autoDownload() {
-    var btnDownload = $("#btn_download");
-    var btnLaunchDownload = $(".big-button-green-flat");
+    let btnDownload = $("#btn_download");
+    let btnLaunchDownload = $(".big-button-green-flat");
 
     if (btnDownload.text().trim() === "Générer le lien de téléchargement") {
         btnDownload.click();
@@ -15,7 +27,7 @@ function autoDownload() {
 }
 
 function autoLogin() {
-    var loginPage = "https://login.uptobox.com/";
+    let loginPage = "https://login.uptobox.com/";
     if (location.href !== loginPage) {
         if ($("#inscription").length === 1) {
             location.href = loginPage;
@@ -26,5 +38,7 @@ function autoLogin() {
     }
 }
 
-autoDownload();
-autoLogin();
+promise.then(function () {
+    autoDownload();
+    autoLogin();
+});
