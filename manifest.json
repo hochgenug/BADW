@@ -44,12 +44,12 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://extreme-download.club/**"
+        "https://wvw.extreme-down.xyz/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
         "scripts/functions.js",
-        "scripts/ed-protect.js"
+        "scripts/ed.js"
       ]
     },
     {
