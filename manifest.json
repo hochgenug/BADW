@@ -22,7 +22,7 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://*.annuaire-telechargement.cc/*"
+        "*://*.annuaire-telechargement.to/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",

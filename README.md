@@ -8,7 +8,7 @@
     * Complete a season with one click
     * Auto click on the view "Serie in progress" & "Series Started"
     * Remove tag feature
-* annuaire-telechargement.com
+* annuaire-telechargement.to
     * Auto search the requested serie
     * On the search page, display the lang and the resolution
     * On the search page, highlight the 1080p and 720p files
