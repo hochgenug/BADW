@@ -4,7 +4,7 @@ function getSearchUrl(provider, serie) {
     let searchLink = null;
     switch (provider) {
         case "AT":
-            searchLink = "https://www.annuaire-telechargement.cc/index.php?search=";
+            searchLink = "https://www.zone-telechargement.net/index.php?search=";
             break;
         case "ED":
             searchLink = "https://www.extreme-down.xyz/home.html?do=search&subaction=search&story=";
@@ -19,7 +19,7 @@ function generaHtmlLink(link, name) {
 
 function getLinks(linkAT, linkED) {
     let html = "<div class='badw-feature' style ='position:absolute; right:130px;width:50px;'>";
-    html += generaHtmlLink(linkAT, "AT") + " - " + generaHtmlLink(linkED, "ED");
+    html += generaHtmlLink(linkAT, "ZT") + " - " + generaHtmlLink(linkED, "ED");
     html += "</div>";
     return html;
 }

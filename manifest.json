@@ -22,7 +22,7 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://*.annuaire-telechargement.cc/*"
+        "*://*.zone-telechargement.net/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
@@ -33,7 +33,7 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://*.annuaire-telechargement.com/telecharger-series/*"
+        "*://*.zone-telechargement.net/telecharger-series/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
