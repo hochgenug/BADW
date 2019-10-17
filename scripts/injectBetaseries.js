@@ -4,7 +4,7 @@ function getSearchUrl(provider, serie) {
     let searchLink = null;
     switch (provider) {
         case "AT":
-            searchLink = "https://www.annuaire-telechargement.cc/index.php?search=";
+            searchLink = "https://www.annuaire-telechargement.to/index.php?search=";
             break;
         case "ED":
             searchLink = "https://www.extreme-down.xyz/home.html?do=search&subaction=search&story=";
