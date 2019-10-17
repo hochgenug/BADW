@@ -9,6 +9,9 @@ function getSearchUrl(provider, serie) {
         case "ED":
             searchLink = "https://www.extreme-down.xyz/home.html?do=search&subaction=search&story=";
             break;
+        case "ST":
+            searchLink = "https://www.seriestream.co/recherche?q=";
+            break;
     }
     return searchLink + serie;
 }
@@ -17,9 +20,9 @@ function generaHtmlLink(link, name) {
     return "<a href=" + link + " target='_blank' style='text-decoration: none;font-weight: bold;' class='generated-links'>" + name + "</a>";
 }
 
-function getLinks(linkAT, linkED) {
-    let html = "<div class='badw-feature' style ='position:absolute; right:130px;width:50px;'>";
-    html += generaHtmlLink(linkAT, "AT") + " - " + generaHtmlLink(linkED, "ED");
+function getLinks(linkAT, linkED, linkST) {
+    let html = "<div class='badw-feature' style ='position:absolute; right:130px;width:80px;'>";
+    html += generaHtmlLink(linkAT, "AT") + " - " + generaHtmlLink(linkED, "ED") + " - " + generaHtmlLink(linkST, "ST");
     html += "</div>";
     return html;
 }
@@ -29,7 +32,7 @@ let checkImage = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFs
 $("#member_shows > .showItem").each(function () {
     let serieName = $(this).children(".showItem__col--1").children(".title").children("strong").text();
     serieName = serieName.replace(/'/g, " ");
-    $(this).children(".showItem__col--3").children(".actions").append(getLinks(getSearchUrl("AT", serieName), getSearchUrl("ED", serieName)) + "<div class='actionButton' onclick='checkAll(this)' style='position: absolute;left: 96px;color: black;height: 20px;'><img style='height:20px;' src='" + checkImage + "'></div>");
+    $(this).children(".showItem__col--3").children(".actions").append(getLinks(getSearchUrl("AT", serieName), getSearchUrl("ED", serieName) , getSearchUrl("ST", serieName)) + "<div class='actionButton' onclick='checkAll(this)' style='position: absolute;left: 96px;color: black;height: 20px;'><img style='height:20px;' src='" + checkImage + "'></div>");
 });
 
 // Only display the series in progress and not started.
