@@ -2,9 +2,9 @@
 let promise = new Promise(function (resolve) {
     /*global chrome */
     chrome.storage.sync.get({
-        isAtEnable: true
+        isZtEnable: true
     }, function (items) {
-        if (items.isAtEnable === true) {
+        if (items.isZtEnable === true) {
             resolve();
         }
     });
@@ -56,4 +56,17 @@ promise.then(function () {
     });
 
     scrollTo(".headBar", ".headBar");
+
+    // Auto click to get the protected link
+    let displayLink = $("center .content-ful form .continuer");
+    if($(displayLink).length > 0){
+        $(displayLink).click();
+    }
+
+    // Auto click on the link
+    setTimeout(function () {
+        if ($(".lienet a").length > 0) {
+            window.location = $(".lienet a").attr("href");
+        }
+    }, 1000);
 });
