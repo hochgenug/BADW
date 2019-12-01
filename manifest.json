@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Betaseries Automatic Download Workflow",
   "description": "This extension help you to get episodes from betaseries.com faster.",
-  "version": "1.19",
+  "version": "1.20",
   "icons": {
     "16": "images/icon16.png",
     "128": "images/icon128.png"
@@ -22,23 +22,24 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://*.annuaire-telechargement.to/*"
+        "*://*.zone-telechargements.net/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
         "scripts/functions.js",
-        "scripts/at-search.js"
+        "scripts/zt-search.js"
       ]
     },
     {
       "run_at": "document_idle",
       "matches": [
-        "*://*.annuaire-telechargement.com/telecharger-series/*"
+        "*://*.zone-telechargement.network/*",
+        "*://*.dl-protect1.co/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
         "scripts/functions.js",
-        "scripts/at-series.js"
+        "scripts/ztn-search.js"
       ]
     },
     {

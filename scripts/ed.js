@@ -12,7 +12,10 @@ let promise = new Promise(function (resolve) {
 
 promise.then(function () {
     $(".blockcontent table").remove();
+    /*global chrome */
     removeIfExist(".blockheader");
+    /*global chrome */
     removeIfExist(".blockcontent .upload-infos");
+    /*global chrome */
     removeIfExist(".blockfooter");
 });
