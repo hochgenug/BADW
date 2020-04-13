@@ -2,33 +2,30 @@
 let promise = new Promise(function (resolve) {
     /*global chrome */
     chrome.storage.sync.get({
-        isZtnEnable: true
+        isZaEnable: true
     }, function (items) {
-        if (items.isZtnEnable === true) {
+        if (items.isZaEnable === true) {
             resolve();
         }
     });
 });
 
 promise.then(function () {
+    scrollTo(".headBar", ".headBar");
     // Auto search when the param search is set
-    if ($("#searchinput").val() === "") {
+    if ($("#searchinputfull").val() === "" && getUrlParam("search") !== 0) {
         /*global getUrlParam */
         let serie = getUrlParam("search").replace(/\+/g, " ").replace(/\:/g, " ");
-        $("#searchinput").val(serie);
-        $("#dosearch").trigger("click");
+        $("#story").val(serie);
+        $("#searchform .submit input").trigger("click");
     }
-
-    // Display all the available link
-    $(".downloadsortsonlink tr").each(function () {
-        $(this).css({display: ""});
-    });
-    $(".btn-primary.more").each(function () {
-        $(this).remove();
-    });
+    scrollTo(".corps", ".corps");
 
     // Auto click to get the protected link
-    $("form .continuer").click();
+    let displayLink = $("center .content-ful form .continuer");
+    if($(displayLink).length > 0){
+        $(displayLink).click();
+    }
 
     // Auto click on the link
     setTimeout(function () {

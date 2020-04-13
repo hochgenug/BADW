@@ -22,5 +22,9 @@ function removeAllIfExist(object) {
 
 function getUrlParam($paramKey) {
     var results = new RegExp("[\?&]" + $paramKey + "=([^&#]*)").exec(window.location.href);
-    return results[1] || 0;
+    if(results === null){
+        return 0;
+    }else {
+        return results[1];
+    }
 }
