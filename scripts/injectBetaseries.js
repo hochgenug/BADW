@@ -3,30 +3,28 @@ function getSearchUrl(provider, serie) {
     serie = serie.replace(/\s/g, "+").replace(/\"/g, "+");
     let searchLink = null;
     switch (provider) {
-        case "ZT":
-            searchLink = "https://www.zone-telechargements.net/?search=";
-            break;
-        case "ZTN":
-            searchLink = "https://www.zone-telechargement.network/index.php?do=search&search=";
+        case "ZA":
+            searchLink = "https://wwv.zone-annuaire.com/?search=";
             break;
         case "ED":
-            searchLink = "https://www.extreme-down.xyz/home.html?do=search&subaction=search&story=";
+            searchLink = "https://www.extreme-down.ninja/home.html?do=search&subaction=search&story=";
             break;
         case "ST":
             searchLink = "https://www.seriestream.co/recherche?q=";
             break;
     }
-    return searchLink + serie;
+    return searchLink + serie.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 function generaHtmlLink(link, name) {
     return "<a href=" + link + " target='_blank' style='text-decoration: none;font-weight: bold;' class='generated-links'>" + name + "</a>";
 }
 
-function getLinks(linkZT, linkZTN, linkED, linkST) {
+function getLinks(linkZA, linkED, linkST) {
     let html = "<div class='badw-feature' style ='position:absolute; right:130px;width:130px;'>";
-    html += generaHtmlLink(linkZT, "ZT") + " - "  + generaHtmlLink(linkZTN, "ZTN")
-         + " - " + generaHtmlLink(linkED, "ED") + " - " + generaHtmlLink(linkST, "ST");
+    html += generaHtmlLink(linkZA, "ZA") + " - "
+         +  generaHtmlLink(linkED, "ED") + " - "
+         + generaHtmlLink(linkST, "ST");
     html += "</div>";
     return html;
 }
@@ -37,8 +35,7 @@ $("#member_shows > .showItem").each(function () {
     let serieName = $(this).children(".showItem__col--1").children(".title").children("strong").text();
     serieName = serieName.replace(/'/g, " ");
     $(this).children(".showItem__col--3").children(".actions").append(getLinks(
-            getSearchUrl("ZT", serieName),
-            getSearchUrl("ZTN", serieName),
+            getSearchUrl("ZA", serieName),
             getSearchUrl("ED", serieName),
             getSearchUrl("ST", serieName))
             + "<div class='actionButton' onclick='checkAll(this)' style='position: absolute;left: 96px;color: black;height: 20px;'><img style='height:20px;' src='" + checkImage + "'></div>");

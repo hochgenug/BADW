@@ -1,6 +1,6 @@
+/*global chrome */
 // Check if the feature is enable
 let promise = new Promise(function (resolve) {
-    /*global chrome */
     chrome.storage.sync.get({
         isEdEnable: true
     }, function (items) {
@@ -12,10 +12,7 @@ let promise = new Promise(function (resolve) {
 
 promise.then(function () {
     $(".blockcontent table").remove();
-    /*global chrome */
     removeIfExist(".blockheader");
-    /*global chrome */
     removeIfExist(".blockcontent .upload-infos");
-    /*global chrome */
     removeIfExist(".blockfooter");
 });
