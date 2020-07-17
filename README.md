@@ -8,7 +8,7 @@
     * Complete a season with one click
     * Auto click on the view "Serie in progress" & "Series Started"
     * Remove tag feature
-* zone-annuaire.com
+* zt-za.com
     * Auto search the requested serie
     * On the search page, auto scroll to the results
     * On the season page, auto scroll to the season quality buttons
@@ -18,7 +18,7 @@
     * Auto click on the links
     * Auto login
     * Auto close tab when download start
-* extreme-down.ninja
+* extreme-down.video
     * Auto search the requested serie
 * ed-protect.org
     * Auto click on the link when it's available
