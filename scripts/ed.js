@@ -11,7 +11,6 @@ let promise = new Promise(function (resolve) {
 });
 
 promise.then(function () {
-    $(".blockcontent table").remove();
     removeIfExist(".blockheader");
     removeIfExist(".blockcontent .upload-infos");
     removeIfExist(".blockfooter");

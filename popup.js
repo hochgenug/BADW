@@ -1,8 +1,8 @@
 function documentEvents() {
     /*global chrome */
-    document.getElementById("za-feature").addEventListener("click",
+    document.getElementById("ztza-feature").addEventListener("click",
         function (element) {
-            chrome.storage.sync.set({"isZaEnable": element.srcElement.checked});
+            chrome.storage.sync.set({"isZtZaEnable": element.srcElement.checked});
         });
 
     document.getElementById("bs-feature").addEventListener("click",
@@ -23,7 +23,7 @@ function documentEvents() {
 
 let promise = new Promise(function (resolve) {
     chrome.storage.sync.get({
-        isZaEnable: true,
+        isZtZaEnable: true,
         isBsEnable: true,
         isEdEnable: true,
         isUtbEnable: true,
@@ -32,7 +32,7 @@ let promise = new Promise(function (resolve) {
     });
 });
 promise.then(function (items) {
-    document.getElementById("za-feature").checked = items.isZaEnable;
+    document.getElementById("ztza-feature").checked = items.isZtZaEnable;
     document.getElementById("bs-feature").checked = items.isBsEnable;
     document.getElementById("ed-feature").checked = items.isEdEnable;
     document.getElementById("utb-feature").checked = items.isUtbEnable;
