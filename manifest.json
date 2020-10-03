@@ -11,11 +11,25 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "https://www.betaseries.com/membre/*/series"
+        "https://www.betaseries.com/membre/*/series",
+        "*://*.zt-za.com/*",
+        "*://zt-protect.com/*",
+        "*://zt-protect.net/*",
+        "https://www.extreme-down.video/*",
+        "*://ed-protect.org/**",
+        "*://uptobox.com/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
-        "scripts/functions.js",
+        "scripts/functions.js"
+      ]
+    },
+    {
+      "run_at": "document_idle",
+      "matches": [
+        "https://www.betaseries.com/membre/*/series"
+      ],
+      "js": [
         "scripts/betaseries.js"
       ]
     },
@@ -25,8 +39,6 @@
         "*://*.zt-za.com/*"
       ],
       "js": [
-        "scripts/lib/jquery-3.2.1.min.js",
-        "scripts/functions.js",
         "scripts/ztza-search.js"
       ]
     },
@@ -37,7 +49,6 @@
         "*://zt-protect.net/*"
       ],
       "js": [
-        "scripts/lib/jquery-3.2.1.min.js",
         "scripts/zt-protect.js"
       ]
     },
@@ -47,8 +58,6 @@
         "https://www.extreme-down.video/*"
       ],
       "js": [
-        "scripts/lib/jquery-3.2.1.min.js",
-        "scripts/functions.js",
         "scripts/ed.js"
       ]
     },
@@ -58,19 +67,15 @@
         "*://ed-protect.org/**"
       ],
       "js": [
-        "scripts/lib/jquery-3.2.1.min.js",
-        "scripts/functions.js",
         "scripts/ed-protect.js"
       ]
     },
     {
       "run_at": "document_idle",
       "matches": [
-        "https://login.uptobox.com/",
         "*://uptobox.com/*"
       ],
       "js": [
-        "scripts/lib/jquery-3.2.1.min.js",
         "scripts/uptobox.js"
       ]
     }
