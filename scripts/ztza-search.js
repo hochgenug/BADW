@@ -2,9 +2,9 @@
 let promise = new Promise(function (resolve) {
     /*global chrome */
     chrome.storage.sync.get({
-        isZaEnable: true
+        isZtZaEnable: true
     }, function (items) {
-        if (items.isZaEnable === true) {
+        if (items.isZtZaEnable === true) {
             resolve();
         }
     });

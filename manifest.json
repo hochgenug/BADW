@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Betaseries Automatic Download Workflow",
   "description": "This extension help you to get episodes from betaseries.com faster.",
-  "version": "1.22",
+  "version": "1.23",
   "icons": {
     "16": "images/icon16.png",
     "128": "images/icon128.png"
@@ -27,13 +27,14 @@
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
         "scripts/functions.js",
-        "scripts/za-search.js"
+        "scripts/ztza-search.js"
       ]
     },
     {
       "run_at": "document_idle",
       "matches": [
-        "*://zt-protect.com/*"
+        "*://zt-protect.com/*",
+        "*://zt-protect.net/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
@@ -43,7 +44,7 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "https://wvw.extreme-down.video/*"
+        "https://www.extreme-down.video/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
