@@ -11,6 +11,11 @@ let promise = new Promise(function (resolve) {
 });
 
 promise.then(function () {
+    $("#ads_top").remove();
+    $(".non_printable").remove();
+    $(".contenu_captcha").next(2).remove();
+    $(".contenu_captcha").next(2).remove();
+
     if ($(".lien a").length === 1) {
         window.location.href = $(".affichier_lien a").attr("href");
     }
