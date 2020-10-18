@@ -11,6 +11,8 @@ let promise = new Promise(function (resolve) {
 });
 
 promise.then(function () {
+    /*global removeIfExist */
+    /*eslint no-undef: "error"*/
     removeIfExist(".blockheader");
     removeIfExist(".blockcontent .upload-infos");
     removeIfExist(".blockfooter");
