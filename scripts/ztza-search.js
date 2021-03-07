@@ -16,8 +16,8 @@ promise.then(function () {
     if ($("#searchinputfull").val() === "" && getUrlParam("search") !== 0) {
         /*global getUrlParam */
         let serie = getUrlParam("search").replace(/\+/g, " ").replace(/\:/g, " ");
-        $("#story").val(serie);
-        $("#searchform .submit input").trigger("click");
+        $("#searchinput").val(serie);
+        $("#dofullsearch").trigger("click");
     }
     scrollTo(".corps", ".corps");
 

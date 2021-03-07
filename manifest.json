@@ -12,10 +12,10 @@
       "run_at": "document_idle",
       "matches": [
         "https://www.betaseries.com/membre/*/series",
-        "*://*.zt-za.com/*",
+        "*://*.zt-za.net/*",
         "*://zt-protect.com/*",
         "*://zt-protect.net/*",
-        "https://www.extreme-down.video/*",
+        "https://www.extreme-down.tv/*",
         "*://ed-protect.org/**",
         "*://uptobox.com/*"
       ],
@@ -36,7 +36,7 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://*.zt-za.com/*"
+        "*://*.zt-za.net/*"
       ],
       "js": [
         "scripts/ztza-search.js"
@@ -55,7 +55,7 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "https://www.extreme-down.video/*"
+        "https://www.extreme-down.tv/*"
       ],
       "js": [
         "scripts/ed.js"

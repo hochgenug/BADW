@@ -1,13 +1,14 @@
 // Functions to manage the links
 function getSearchUrl(provider, serie) {
+    if(serie === "Attack on Titan"){serie = "Shingeki+no+Kyojin";}
     serie = serie.replace(/\s/g, "+").replace(/\"/g, "+");
     let searchLink = null;
     switch (provider) {
         case "ZTZA":
-            searchLink = "https://www.zt-za.com/?search=";
+            searchLink = "https://www.zt-za.net/index.php?do=search&old=1&search=";
             break;
         case "ED":
-            searchLink = "https://www.extreme-down.video/home.html?do=search&subaction=search&story=";
+            searchLink = "https://www.extreme-down.tv/home.html?do=search&subaction=search&story=";
             break;
         case "ST":
             searchLink = "https://www.seriestream.co/recherche?q=";

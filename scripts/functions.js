@@ -14,9 +14,7 @@ function removeIfExist(object) {
 
 function removeAllIfExist(object) {
     $.each($(object), function () {
-        {
-            removeIfExist($(this));
-        }
+        removeIfExist($(this));
     });
 }
 
