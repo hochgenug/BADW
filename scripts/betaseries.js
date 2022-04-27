@@ -12,7 +12,7 @@ let promise = new Promise(function (resolve) {
 
 promise.then(function () {
     let script = document.createElement("script");
-    script.src = chrome.extension.getURL("scripts/injectBetaseries.js");
+    script.src = chrome.runtime.getURL("scripts/injectBetaseries.js");
     script.onload = function () {
         this.remove();
     };

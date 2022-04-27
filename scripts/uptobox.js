@@ -11,12 +11,7 @@ let promise = new Promise(function (resolve) {
 });
 
 function autoDownload() {
-    let btnDownload = $("#btn_download");
-    let btnLaunchDownload = $(".big-button-green-flat");
-
-    if (btnDownload.text().trim() === "Générer le lien de téléchargement") {
-        btnDownload.click();
-    }
+    let btnLaunchDownload = $(".big-button-green");
 
     if (btnLaunchDownload.text().replace(/[\t\n]+/g, " ").trim() === "Cliquez-ici pour lancer votre téléchargement") {
         location.href = btnLaunchDownload.attr("href");

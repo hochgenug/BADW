@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Betaseries Automatic Download Workflow",
   "description": "This extension help you to get episodes from betaseries.com faster.",
   "version": "1.23",
@@ -80,12 +80,14 @@
       ]
     }
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html"
   },
   "web_accessible_resources": [
-    "scripts/injectBetaseries.js"
-  ],
+    {
+      "resources": ["scripts/injectBetaseries.js"],
+      "matches": ["https://www.betaseries.com/*"]
+    }],
   "permissions": [
     "storage"
   ]
