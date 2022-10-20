@@ -16,7 +16,8 @@ promise.then(function () {
     $(".contenu_captcha").next(2).remove();
     $(".contenu_captcha").next(2).remove();
 
-    if ($(".lien a").length === 1) {
+    let linkElement = $(".lien a");
+    if (linkElement.length === 1) {
         window.location.href = $(".affichier_lien a").attr("href");
     }
 
@@ -30,4 +31,13 @@ promise.then(function () {
     if (submitButton.length === 1) {
         submitButton.click();
     }
+
+    if (linkElement.length >= 1) {
+        $("h2").append("<p id='downloadAll' style='color:red;cursor: pointer'>Download all</p>");
+    }
+    $("#downloadAll").click(function () {
+        linkElement.each(function (index) {
+            window.open($(this).attr("href"), "_blank");
+        });
+    });
 });

@@ -11,7 +11,7 @@ function getSearchUrl(provider, serie) {
             searchLink = "https://www.extreme-down.tv/home.html?do=search&subaction=search&story=";
             break;
         case "ST":
-            searchLink = "https://www.seriestream.co/recherche?q=";
+            searchLink = "https://www.seriestream.stream/recherche?q=";
             break;
     }
     return searchLink + serie.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
