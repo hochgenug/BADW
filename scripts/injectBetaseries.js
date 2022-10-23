@@ -2,19 +2,24 @@
 function getSearchUrl(provider, serie) {
     if(serie === "Attack on Titan"){serie = "Shingeki+no+Kyojin";}
     serie = serie.replace(/\s/g, "+").replace(/\"/g, "+");
-    let searchLink = null;
-    switch (provider) {
-        case "ZTZA":
-            searchLink = "https://www.zone-telechargement.sbs/?p=series&search=";
-            break;
-        case "ED":
-            searchLink = "https://www.extreme-down.tv/home.html?do=search&subaction=search&story=";
-            break;
-        case "ST":
-            searchLink = "https://www.seriestream.stream/recherche?q=";
-            break;
+
+    function manageProviders() {
+        let searchLink = null;
+        switch (provider) {
+            case "ZTZA":
+                searchLink = "https://www.zone-telechargement.sbs/?p=series&search=";
+                break;
+            case "ED":
+                searchLink = "https://www.extreme-down.tv/home.html?do=search&subaction=search&story=";
+                break;
+            case "ST":
+                searchLink = "https://www.seriestream.stream/recherche?q=";
+                break;
+        }
+        return searchLink;
     }
-    return searchLink + serie.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    return manageProviders() + serie.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 function generaHtmlLink(link, name) {
