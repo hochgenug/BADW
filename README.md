@@ -8,7 +8,7 @@
     * Complete a season with one click
     * Auto click on the view "Serie in progress" & "Series Started"
     * Remove tag feature
-* zt-za.net
+* zone-telechargement.sbs
     * Auto search the requested serie
     * On the search page, auto scroll to the results
     * On the season page, auto scroll to the season quality buttons
@@ -24,5 +24,6 @@
     * Auto search the requested serie
 * ed-protect.org
     * Auto click on the links
+    * Add button that allow to click on all links for a pack
 * Global    
     * Possibility to enable/disable the feature for a specific website by clicking on the extension icon.
