@@ -32,12 +32,15 @@ promise.then(function () {
         submitButton.click();
     }
 
-    if (linkElement.length >= 1) {
-        $("h2").append("<p id='downloadAll' style='color:red;cursor: pointer'>Download all</p>");
-    }
-    $("#downloadAll").click(function () {
-        linkElement.each(function (index) {
-            window.open($(this).attr("href"), "_blank");
+    function managePackLinks() {
+        if (linkElement.length >= 1) {
+            $("h2").append("<p id='downloadAll' style='color:red;cursor: pointer'>Download all</p>");
+        }
+        $("#downloadAll").click(function () {
+            linkElement.each(function (index) {
+                window.open($(this).attr("href"), "_blank");
+            });
         });
-    });
+    }
+    managePackLinks();
 });
