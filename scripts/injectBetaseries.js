@@ -7,10 +7,10 @@ function getSearchUrl(provider, serie) {
         let searchLink = null;
         switch (provider) {
             case "ZTZA":
-                searchLink = "https://www.zone-telechargement.city/?p=series&search=";
+                searchLink = "https://www.zone-telechargement.lat/?p=series&search=";
                 break;
             case "ED":
-                searchLink = "https://www.extreme-down.moe/?p=series&search=";
+                searchLink = "https://www.extreme-down.lat/?p=series&search=";
                 break;
         }
         return searchLink;
