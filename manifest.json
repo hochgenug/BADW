@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Betaseries Automatic Download Workflow",
   "description": "This extension help you to get episodes from betaseries.com faster.",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "icons": {
     "16": "images/icon16.png",
     "128": "images/icon128.png"
@@ -13,11 +13,9 @@
       "matches": [
         "https://www.betaseries.com/membre/*/series",
         "*://*.zt-za.net/*",
-        "*://zt-protect.com/*",
-        "*://zt-protect.net/*",
-        "https://www.extreme-down.tv/*",
-        "*://ed-protect.org/**",
-        "*://uptobox.com/*"
+        "*://dl-protect.link/*",
+        "*://real-debrid.com/*",
+        "https://www.extreme-down.tv/*"
       ],
       "js": [
         "scripts/lib/jquery-3.2.1.min.js",
@@ -45,11 +43,10 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://zt-protect.com/*",
-        "*://zt-protect.net/*"
+        "*://dl-protect.link/*"
       ],
       "js": [
-        "scripts/zt-protect.js"
+        "scripts/dl-protect.js"
       ]
     },
     {
@@ -64,19 +61,10 @@
     {
       "run_at": "document_idle",
       "matches": [
-        "*://ed-protect.org/**"
+        "*://real-debrid.com/*"
       ],
       "js": [
-        "scripts/ed-protect.js"
-      ]
-    },
-    {
-      "run_at": "document_idle",
-      "matches": [
-        "*://uptobox.com/*"
-      ],
-      "js": [
-        "scripts/uptobox.js"
+        "scripts/real-debrid.js"
       ]
     }
   ],
