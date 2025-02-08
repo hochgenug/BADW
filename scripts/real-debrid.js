@@ -6,5 +6,5 @@ if (link !== null) {
     jQuery("#sub_links").click();
     setTimeout(() => {
         window.location.href = jQuery(".link-generated a").first().attr("href");
-    }, "1000");
+    }, "3000");
 }
