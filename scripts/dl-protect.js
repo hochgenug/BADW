@@ -14,7 +14,7 @@ promise.then(function () {
     let link = jQuery(".urls a").attr("href");
 
     if (typeof link !== "undefined") {
-        window.location.href = "https://real-debrid.com/?link=" + link;
+        window.location.href = "https://real-debrid.com/?link=" + encodeURIComponent(link);
     }
 
     let verifInterval = 0;
